@@ -129,7 +129,7 @@ if __name__ == "__main__":
     coordinates = get_coordinates(website=geolocalization_data['website'], apikey=geolocalization_data['apikey'],
                                   location=input_args.address)
     print(f"Prognoza pogody dla: {input_args.address}")
-    if input_args.num_days == "0":
+    if input_args.num_days == "0" or input_args.num_days == "1":
         d = get_current_weather(website=weather_data['website'], apikey=weather_data['apikey'],
                                 endpoint=weather_data['realtime_endpoint'], longitude=coordinates["lng"],
                                 latitude=coordinates["lat"])
