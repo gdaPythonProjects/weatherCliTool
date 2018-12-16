@@ -37,9 +37,9 @@ def get_current_weather(website, apikey, endpoint, longitude, latitude):
     :param website: strona do pobrania informacji o aktualnej pogodzie dla określonych współrzędnych
     :param apikey: klucz do autoryzacji w serwisie
     :param endpoint: endpoint API strony
-    :param longitude:
-    :param latitude:
-    :return:
+    :param longitude: dlugosc geograficzna (float)
+    :param latitude: szerokosc geograficzna (float)
+    :return: informacje o pogodzie w formie slownika
     """
     url = website + endpoint
     data = {
@@ -82,10 +82,10 @@ def get_forecast_weather(website, endpoint, apikey, longitude, latitude, num_of_
     :param website: strona do pobrania informacji o aktualnej pogodzie dla określonych współrzędnych
     :param endpoint: endpoint API strony
     :param apikey: klucz do autoryzacji w serwisie
-    :param longitude:
-    :param latitude:
+    :param longitude: dlugosc geograficzna
+    :param latitude: szerokosc geograficzna
     :param num_of_days: liczba dni, dla ktorych nalezy wyswietlic prognoze
-    :return:
+    :return: informacje o pogodzie w formie slownika
     """
     url = website + endpoint
     data = {
